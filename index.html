@@ -1,0 +1,621 @@
+<!DOCTYPE html><html class="scroll-smooth hmcubjoqe" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Ciroo - Your business. Your app. Your sales system.</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#f8f9ff",
+                    "on-surface": "#0b1c30",
+                    "surface-container": "#e5eeff",
+                    "secondary-fixed": "#dae2fd",
+                    "primary": "#0050cb",
+                    "error": "#ba1a1a",
+                    "secondary": "#565e74",
+                    "inverse-on-surface": "#eaf1ff",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "on-secondary-container": "#5c647a",
+                    "on-background": "#0b1c30",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-container": "#f6f8fa",
+                    "surface-container-highest": "#d3e4fe",
+                    "surface-container-high": "#dce9ff",
+                    "tertiary-fixed-dim": "#c4c7c9",
+                    "primary-fixed-dim": "#b3c5ff",
+                    "background": "#f8f9ff",
+                    "primary-fixed": "#dae1ff",
+                    "tertiary": "#565a5b",
+                    "surface-bright": "#f8f9ff",
+                    "outline": "#727687",
+                    "on-primary-container": "#f8f7ff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed": "#001849",
+                    "tertiary-fixed": "#e0e3e5",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#191c1e",
+                    "surface-variant": "#d3e4fe",
+                    "on-secondary-fixed": "#131b2e",
+                    "on-secondary": "#ffffff",
+                    "surface-dim": "#cbdbf5",
+                    "on-primary-fixed-variant": "#003fa4",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "primary-container": "#0066ff",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#c2c6d8",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "inverse-primary": "#b3c5ff",
+                    "inverse-surface": "#213145",
+                    "surface-tint": "#0054d6",
+                    "tertiary-container": "#6f7274",
+                    "on-surface-variant": "#424656",
+                    "surface-container-low": "#eff4ff",
+                    "secondary-container": "#dae2fd"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px",
+                    "2xl": "1rem",
+                    "3xl": "1.5rem",
+                    "4xl": "2rem"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "section-padding-desktop": "120px",
+                    "unit": "8px",
+                    "section-padding-mobile": "64px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Inter", "sans-serif"],
+                    "label-caps": ["Inter", "sans-serif"],
+                    "display-lg-mobile": ["Inter", "sans-serif"],
+                    "body-lg": ["Inter", "sans-serif"],
+                    "body-md": ["Inter", "sans-serif"],
+                    "display-lg": ["Inter", "sans-serif"],
+                    "headline-lg": ["Inter", "sans-serif"]
+            },
+            "fontSize": {
+                    "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                    "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                    "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                    "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" }],
+                    "body-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+                    "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                    "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(114, 118, 135, 0.1);
+        }
+        .mockup-shadow {
+            box-shadow: 0 30px 60px -12px rgba(0, 80, 203, 0.15), 0 18px 36px -18px rgba(0, 0, 0, 0.1);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 0%, rgba(229, 238, 255, 0.8) 0%, rgba(248, 249, 255, 1) 70%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- 1. TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl border-b border-outline/10">
+<div class="flex justify-between items-center max-w-[1280px] mx-auto px-gutter h-20">
+<div class="flex items-center gap-2"><img alt="Ciroo Logo" class="h-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlaSWvN1OwClhVqCw1r1dQBQwvZg2IPFjFapASc8ff8HaygE2Em_tzTa085Ou37T9IdDq55fsUnbrWR6srkq12qkv9QFS-h7aXg9v0d2ClscUbBBJOzCAdqKqGSwXI0pbGdJ-wfj_c9bNsQ3lEwnoeutnwH8r7lTCRQzcQ5ViW-abfnKT5SGMGUO410q47DIyqlgiWSHECALGbL4OJOrHH13T_CwhnEre3J-3ZPz_XPa7oLfKaZg94lDtor5JTdBk5IGE"><span class="font-bold text-xl text-on-surface">Ciroo</span></div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-secondary hover:text-primary transition-colors duration-200" href="#how-it-works">How It Works</a>
+<a class="font-body-md text-secondary hover:text-primary transition-colors duration-200" href="#features">Features</a>
+<a class="font-body-md text-secondary hover:text-primary transition-colors duration-200" href="#pricing">Pricing</a>
+</div>
+<a class="hidden md:flex items-center justify-center bg-primary text-on-primary px-6 py-3 rounded-lg font-body-md font-semibold hover:bg-primary-fixed-variant transition-all active:scale-95 shadow-sm" href="mailto:selcuk@ciroo.app?subject=I'm%20interested%20in%20Ciroo">
+                Get Your Own App
+            </a>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- 2. Hero Section -->
+<section class="relative pt-32 pb-section-padding-mobile md:pt-48 md:pb-section-padding-desktop hero-gradient overflow-hidden">
+<div class="max-w-[1280px] mx-auto px-gutter relative z-10 flex flex-col items-center text-center">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container border border-outline/10 mb-8">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-primary">INTRODUCING CIROO APP</span>
+</div>
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface max-w-4xl mx-auto mb-6">
+                Your business.<br>Your app.<br>Your sales system.
+            </h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl mx-auto mb-10">
+                A personalized daily sales app built around the way your business works.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-20 w-full sm:w-auto">
+<a class="w-full sm:w-auto px-8 py-4 bg-primary text-on-primary rounded-lg font-body-lg font-semibold hover:bg-primary-fixed-variant transition-all active:scale-95 shadow-lg shadow-primary/20 flex items-center justify-center gap-2" href="mailto:selcuk@ciroo.app?subject=I'm%20interested%20in%20Ciroo">
+                    Get Your Own App <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+<a class="w-full sm:w-auto px-8 py-4 bg-transparent border border-outline/20 text-on-surface rounded-lg font-body-lg font-semibold hover:bg-surface-container transition-all active:scale-95 flex justify-center items-center" href="#how-it-works">
+                    See How It Works
+                </a>
+</div>
+<!-- Premium Mobile Mockup -->
+<div class="relative w-full max-w-[320px] md:max-w-[400px] mx-auto perspective-[1000px]">
+<div class="bg-black rounded-[40px] p-3 shadow-2xl mockup-shadow relative transform rotate-y-[-5deg] rotate-x-[5deg] transition-transform duration-700 hover:rotate-y-0 hover:rotate-x-0">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-6 bg-black rounded-b-xl z-20"></div>
+<div class="bg-surface rounded-[32px] overflow-hidden h-[640px] md:h-[720px] relative border border-outline/10 flex flex-col">
+<!-- Mockup App Header -->
+<div class="pt-12 pb-6 px-6 bg-primary text-on-primary">
+<p class="text-sm opacity-80 mb-1">Welcome back,</p>
+<h3 class="text-2xl font-bold">Jansen Fashion</h3>
+</div>
+<!-- Mockup App Content -->
+<div class="p-6 flex-1 bg-surface-container-low flex flex-col gap-4 overflow-hidden">
+<div class="bg-surface p-4 rounded-xl shadow-sm border border-outline/5">
+<p class="text-xs text-secondary mb-1">Today's Entries</p>
+<p class="text-3xl font-bold text-on-surface">42</p>
+<div class="flex items-center gap-1 text-primary mt-2 text-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span class="">+5 from yesterday</span>
+</div>
+</div>
+<h4 class="font-semibold text-on-surface mt-2">New Entry</h4>
+<div class="grid grid-cols-2 gap-3">
+<button class="bg-surface p-4 rounded-xl border border-outline/10 flex flex-col items-center justify-center gap-2 hover:border-primary/50 transition-colors">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">checkroom</span>
+</div>
+<span class="text-sm font-medium">Clothing</span>
+</button>
+<button class="bg-surface p-4 rounded-xl border border-outline/10 flex flex-col items-center justify-center gap-2 hover:border-primary/50 transition-colors">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">drive_file_move_outline</span>
+</div>
+<span class="text-sm font-medium">Shoes</span>
+</button>
+<button class="bg-surface p-4 rounded-xl border border-outline/10 flex flex-col items-center justify-center gap-2 hover:border-primary/50 transition-colors">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">watch</span>
+</div>
+<span class="text-sm font-medium">Accessories</span>
+</button>
+<button class="bg-surface p-4 rounded-xl border border-outline/10 flex flex-col items-center justify-center gap-2 hover:border-primary/50 transition-colors">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">more_horiz</span>
+</div>
+<span class="text-sm font-medium">Other</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Elements for Depth -->
+<div class="absolute -right-12 top-32 glass-panel p-4 rounded-2xl shadow-xl flex items-center gap-3 animate-[bounce_4s_ease-in-out_infinite]">
+<div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<div>
+<p class="text-xs font-semibold text-secondary">Entry Recorded</p>
+<p class="font-bold text-on-surface">New Item</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Explanation Section -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface-container-lowest">
+<div class="max-w-[1280px] mx-auto px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface mb-6">Your business, your way.</h2>
+<p class="font-body-lg text-body-lg text-secondary mb-10">
+                        Ciroo gives small businesses their own branded mobile app for recording and managing daily sales — without the complexity of a traditional ERP.
+                    </p>
+<div class="flex flex-col gap-6">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<div>
+<h4 class="font-headline-lg text-xl font-bold text-on-surface mb-1">Simple to use</h4>
+<p class="text-secondary">No training required. Just tap, enter the amount, and submit.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">tune</span>
+</div>
+<div>
+<h4 class="font-headline-lg text-xl font-bold text-on-surface mb-1">Personalized</h4>
+<p class="text-secondary">Built with your exact product categories and workflow in mind.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">smartphone</span>
+</div>
+<div>
+<h4 class="font-headline-lg text-xl font-bold text-on-surface mb-1">Your own app</h4>
+<p class="text-secondary">Your logo, your name, sitting right on your home screen.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative h-[600px] rounded-3xl overflow-hidden bg-surface-container">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A clean, minimalist composition showing a modern smartphone next to a sleek coffee cup and a subtle notebook on a light grey desk. The smartphone screen displays a clean dashboard interface. High-key lighting, corporate minimalist aesthetic, sophisticated and premium look." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC42qNYyY8-XiA-MIlhC0BZIa6V1h656K2ueqnK8CzGrPzIr4j5cbfGGfyc9GjNNkOUS4b4-M08d2Zvg8nFK-GHxpEMLT9NvKOG4FDGUseCCfa23keL6KilSr6H9smmqWAsrbD6dDL2n0s_ATmdsYZQZUSZW3Uqy99WzD5LkZ42NWpYhweaCtXXSuqjHdt4Y-gC3Bv-rI5xCWNCGwDIynxIRssiLrWHe18RT3gXxuI5sakppdo2HkWTDw">
+<div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. How It Works -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface" id="how-it-works">
+<div class="max-w-[1280px] mx-auto px-gutter">
+<div class="text-center max-w-3xl mx-auto mb-20">
+<h2 class="font-headline-xl text-headline-xl text-on-surface mb-6">Simple by design.</h2>
+<p class="font-body-lg text-body-lg text-secondary">A streamlined flow that takes seconds, so you can get back to your customers.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-3xl border border-outline/10 shadow-sm relative overflow-hidden group hover:border-primary/30 transition-colors">
+<div class="absolute -right-4 -top-4 text-[120px] font-black text-surface-container-high/50 group-hover:text-primary/10 transition-colors leading-none">01</div>
+<div class="w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center mb-6 relative z-10">
+<span class="material-symbols-outlined text-on-surface">person_add</span>
+</div>
+<h3 class="font-headline-lg text-2xl mb-3 relative z-10 text-on-surface">Employee enters</h3>
+<p class="text-secondary relative z-10">Employee selects the category and enters the sale amount on their phone.</p>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-3xl border border-outline/10 shadow-sm relative overflow-hidden group hover:border-primary/30 transition-colors">
+<div class="absolute -right-4 -top-4 text-[120px] font-black text-surface-container-high/50 group-hover:text-primary/10 transition-colors leading-none">02</div>
+<div class="w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center mb-6 relative z-10">
+<span class="material-symbols-outlined text-on-surface">send</span>
+</div>
+<h3 class="font-headline-lg text-2xl mb-3 relative z-10 text-on-surface">Submit</h3>
+<p class="text-secondary relative z-10">One tap submits the record securely to the cloud database instantly.</p>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-3xl border border-outline/10 shadow-sm relative overflow-hidden group hover:border-primary/30 transition-colors">
+<div class="absolute -right-4 -top-4 text-[120px] font-black text-surface-container-high/50 group-hover:text-primary/10 transition-colors leading-none">03</div>
+<div class="w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center mb-6 relative z-10">
+<span class="material-symbols-outlined text-on-surface">visibility</span>
+</div>
+<h3 class="font-headline-lg text-2xl mb-3 relative z-10 text-on-surface">Owner sees info</h3>
+<p class="text-secondary relative z-10">The business owner gets real-time visibility into sales via their dashboard.</p>
+</div>
+<!-- Step 4 -->
+<div class="bg-surface-container-lowest p-8 rounded-3xl border border-outline/10 shadow-sm relative overflow-hidden group hover:border-primary/30 transition-colors">
+<div class="absolute -right-4 -top-4 text-[120px] font-black text-surface-container-high/50 group-hover:text-primary/10 transition-colors leading-none">04</div>
+<div class="w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center mb-6 relative z-10">
+<span class="material-symbols-outlined text-on-surface">bar_chart</span>
+</div>
+<h3 class="font-headline-lg text-2xl mb-3 relative z-10 text-on-surface">Reports organized</h3>
+<p class="text-secondary relative z-10">Data is automatically organized into clean, actionable daily reports.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Personalization Section (Bento Grid) -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface-container-lowest">
+<div class="max-w-[1280px] mx-auto px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<h2 class="font-headline-xl text-headline-xl text-on-surface mb-6">Built around your business.</h2>
+<p class="font-body-lg text-body-lg text-secondary">
+                        Ciroo is customized around the way your business actually works. We don't force you into a box.
+                    </p>
+</div>
+</div>
+<!-- Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[240px]">
+<!-- Your Brand Card (Spans 2 cols on md) -->
+<div class="md:col-span-2 bg-surface-container-low rounded-3xl p-8 relative overflow-hidden flex flex-col justify-between border border-outline/5 group">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="relative z-10">
+<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm mb-4">
+<span class="material-symbols-outlined text-primary">storefront</span>
+</div>
+<h3 class="font-headline-lg text-2xl text-on-surface mb-2">Your brand &amp; name</h3>
+<p class="text-secondary max-w-sm">It's not "Ciroo app" on your phone. It's "Jansen Fashion" or "Corner Café" with your logo.</p>
+</div>
+<!-- Decorative abstract visual -->
+<div class="absolute right-0 bottom-0 w-64 h-64 bg-primary/5 rounded-tl-full blur-2xl"></div>
+</div>
+<!-- Your Categories Card -->
+<div class="bg-surface-container-low rounded-3xl p-8 relative overflow-hidden flex flex-col justify-between border border-outline/5">
+<div class="relative z-10">
+<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm mb-4">
+<span class="material-symbols-outlined text-primary">category</span>
+</div>
+<h3 class="font-headline-lg text-2xl text-on-surface mb-2">Your categories</h3>
+<p class="text-secondary">Define exactly what you sell. No irrelevant buttons.</p>
+</div>
+</div>
+<!-- Your Team Card -->
+<div class="bg-surface-container-low rounded-3xl p-8 relative overflow-hidden flex flex-col justify-between border border-outline/5">
+<div class="relative z-10">
+<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm mb-4">
+<span class="material-symbols-outlined text-primary">group</span>
+</div>
+<h3 class="font-headline-lg text-2xl text-on-surface mb-2">Your team</h3>
+<p class="text-secondary">Add staff accounts with specific permission levels.</p>
+</div>
+</div>
+<!-- Your Workflow Card (Spans 2 cols on md) -->
+<div class="md:col-span-2 bg-inverse-surface rounded-3xl p-8 relative overflow-hidden flex items-center border border-outline/5">
+<div class="relative z-10 flex-1 pr-8">
+<h3 class="font-headline-lg text-2xl text-surface-bright mb-2">Your workflow</h3>
+<p class="text-surface-variant/80">We map the app to how you already record sales, just making it digital and fast.</p>
+</div>
+<div class="w-1/3 flex justify-center items-center opacity-80 mix-blend-luminosity relative">
+<img class="w-full h-auto object-contain" data-alt="A sleek, minimalist diagram of a workflow process drawn with thin white lines on a dark slate background. It looks like a high-tech architectural blueprint for software. Corporate modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-Zaibis9ULN2QMVoF8wbL3hmP9smLSA4kj_TZxDPQrPF0rjbYn1apxNi-m9wiiVAal01bF6COoUk1uWE8XZXkEvDTJNPhRlL69r6IxDXDcVPhc0iC3xOz5flvHiZWFDDOMMkTtdwQNFAcD6T0F-rhH5LALuiO0WslcitrPOkpH8u0QMkDzmFhxBHckgPi3koIJnwfeljbToGjHnMqu7CIozLrfjPL1wz0KPeeTl1u_Dk11Qw1nz1Pxw">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Feature Section -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface" id="features">
+<div class="max-w-[1280px] mx-auto px-gutter">
+<div class="text-center max-w-3xl mx-auto mb-20">
+<h2 class="font-headline-xl text-headline-xl text-on-surface mb-6">Everything you need.<br>Nothing you don't.</h2>
+<p class="font-body-lg text-body-lg text-secondary">Focus on features that matter for daily operations.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-12">
+<div class="flex gap-6">
+<div class="mt-1">
+<span class="material-symbols-outlined text-primary text-[32px] font-light">today</span>
+</div>
+<div>
+<h3 class="font-bold text-lg text-on-surface mb-2">Daily Sales</h3>
+<p class="text-secondary">Track income day by day with a clean, uncrowded interface designed for speed.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="mt-1">
+<span class="material-symbols-outlined text-primary text-[32px] font-light">style</span>
+</div>
+<div>
+<h3 class="font-bold text-lg text-on-surface mb-2">Custom Categories</h3>
+<p class="text-secondary">Organize entries by department, product type, or service based on your specific setup.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="mt-1">
+<span class="material-symbols-outlined text-primary text-[32px] font-light">admin_panel_settings</span>
+</div>
+<div>
+<h3 class="font-bold text-lg text-on-surface mb-2">Employee Access</h3>
+<p class="text-secondary">Give staff access to enter sales without seeing sensitive historical or total revenue data.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="mt-1">
+<span class="material-symbols-outlined text-primary text-[32px] font-light">analytics</span>
+</div>
+<div>
+<h3 class="font-bold text-lg text-on-surface mb-2">Records &amp; Reports</h3>
+<p class="text-secondary">Auto-generated summaries at the end of the month.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="mt-1">
+<span class="material-symbols-outlined text-primary text-[32px] font-light">edit_note</span>
+</div>
+<div>
+<h3 class="font-bold text-lg text-on-surface mb-2">Notes</h3>
+<p class="text-secondary">Attach quick context to specific transactions for reference later.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. Pricing Section -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface-container-low border-y border-outline/10" id="pricing">
+<div class="max-w-[1280px] mx-auto px-gutter">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="font-headline-xl text-headline-xl text-on-surface mb-6">Get your own business app.</h2>
+<p class="font-body-lg text-body-lg text-secondary">A transparent, one-time build fee. No hidden per-user licensing costs.</p>
+</div>
+<div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Founding Offer -->
+<div class="bg-surface-container-lowest rounded-3xl p-10 border-2 border-primary shadow-xl relative transform md:-translate-y-4">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-on-primary px-4 py-1 rounded-full text-xs font-bold tracking-wider">
+                        FIRST 3 CUSTOMERS
+                    </div>
+<h3 class="text-2xl font-bold text-on-surface mb-2">Founding Offer</h3>
+<p class="text-secondary mb-6">Complete custom app setup</p>
+<div class="flex items-baseline gap-1 mb-8">
+<span class="text-5xl font-black text-on-surface">€1,499</span>
+<span class="text-secondary">one-time</span>
+</div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+                            Custom branded app icon &amp; name
+                        </li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+                            Personalized category setup
+                        </li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+                            Unlimited employee users
+                        </li>
+</ul>
+<div class="pt-6 border-t border-outline/10 mb-8">
+<p class="text-sm text-secondary flex flex-col gap-1">
+<span class="flex items-center justify-between w-full">
+                                Platform &amp; Maintenance <span class="font-bold text-on-surface">€15/mo</span>
+</span>
+<span class="text-xs opacity-80 mt-2">New features, integrations and custom development are quoted separately.</span>
+</p>
+</div>
+<a class="w-full py-4 bg-primary text-on-primary rounded-xl font-bold hover:bg-primary-fixed-variant transition-colors active:scale-95 flex justify-center items-center" href="mailto:selcuk@ciroo.app?subject=I'm%20interested%20in%20the%20Ciroo%20Founding%20Offer">
+                        Claim Offer
+                    </a>
+</div>
+<!-- Standard -->
+<div class="bg-surface-container-lowest rounded-3xl p-10 border border-outline/10 shadow-sm flex flex-col">
+<h3 class="text-2xl font-bold text-on-surface mb-2">Standard</h3>
+<p class="text-secondary mb-6">Custom app setup</p>
+<div class="flex items-baseline gap-1 mb-8">
+<span class="text-5xl font-black text-on-surface">€1,999</span>
+<span class="text-secondary">one-time</span>
+</div>
+<ul class="space-y-4 mb-8 flex-1">
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+                            Custom branded app icon &amp; name
+                        </li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+                            Personalized category setup
+                        </li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+                            Unlimited employee users
+                        </li>
+</ul>
+<div class="pt-6 border-t border-outline/10 mb-8">
+<p class="text-sm text-secondary flex flex-col gap-1">
+<span class="flex items-center justify-between w-full">
+                                Platform &amp; Maintenance <span class="font-bold text-on-surface">€15/mo</span>
+</span>
+<span class="text-xs opacity-80 mt-2">New features, integrations and custom development are quoted separately.</span>
+</p>
+</div>
+<a class="w-full py-4 bg-surface-container text-on-surface rounded-xl font-bold hover:bg-surface-container-high transition-colors active:scale-95 flex justify-center items-center" href="mailto:selcuk@ciroo.app?subject=I'm%20interested%20in%20Ciroo">
+                        Get Started
+                    </a>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. FAQ -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface">
+<div class="max-w-3xl mx-auto px-gutter">
+<h2 class="font-headline-xl text-headline-xl text-center text-on-surface mb-12">Questions, answered.</h2>
+<div class="space-y-4">
+<!-- FAQ Item 1 -->
+<details class="group bg-surface-container-lowest border border-outline/10 rounded-2xl overflow-hidden [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex justify-between items-center cursor-pointer p-6 bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<h4 class="font-bold text-lg text-on-surface pr-8">Is this a native app?</h4>
+<span class="material-symbols-outlined text-secondary group-open:rotate-180 transition-transform duration-300">expand_more</span>
+</summary>
+<div class="p-6 pt-0 text-secondary bg-surface-container-lowest">
+                        Ciroo runs directly on your device, saving to your home screen and feeling exactly like a native app without the hassle of app store approvals or updates.
+                    </div>
+</details>
+<!-- FAQ Item 2 -->
+<details class="group bg-surface-container-lowest border border-outline/10 rounded-2xl overflow-hidden [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex justify-between items-center cursor-pointer p-6 bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<h4 class="font-bold text-lg text-on-surface pr-8">How long does it take to get my app?</h4>
+<span class="material-symbols-outlined text-secondary group-open:rotate-180 transition-transform duration-300">expand_more</span>
+</summary>
+<div class="p-6 pt-0 text-secondary bg-surface-container-lowest">
+                        Once we finalize your categories and branding assets, your custom app is typically ready to install on your devices shortly after.
+                    </div>
+</details>
+<!-- FAQ Item 3 -->
+<details class="group bg-surface-container-lowest border border-outline/10 rounded-2xl overflow-hidden [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex justify-between items-center cursor-pointer p-6 bg-surface-container-lowest hover:bg-surface-container-low transition-colors">
+<h4 class="font-bold text-lg text-on-surface pr-8">Can my employees see total revenue?</h4>
+<span class="material-symbols-outlined text-secondary group-open:rotate-180 transition-transform duration-300">expand_more</span>
+</summary>
+<div class="p-6 pt-0 text-secondary bg-surface-container-lowest">
+                        No. Employee accounts are restricted to 'entry only' by default. Only designated admin accounts (like the owner) can view historical records, dashboards, and total revenue figures.
+                    </div>
+</details>
+</div>
+</div>
+</section>
+<!-- 11. Final CTA -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-inverse-surface text-surface-bright relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+</div>
+<div class="max-w-[1280px] mx-auto px-gutter relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="font-display-lg-mobile md:font-display-lg md:text-display-lg text-surface-bright mb-6 leading-tight">
+                    Your business deserves its own app.
+                </h2>
+<p class="font-body-lg text-body-lg text-surface-variant/80 mb-10 max-w-md">
+                    Build a simple sales system around the way your business works. Fast, custom, and reliable.
+                </p>
+<a class="inline-flex px-8 py-4 bg-primary text-on-primary rounded-lg font-body-lg font-semibold hover:bg-primary-fixed-variant transition-all active:scale-95 shadow-lg items-center gap-2" href="mailto:selcuk@ciroo.app?subject=I'm%20interested%20in%20Ciroo">
+                    Get Your Own App <span class="material-symbols-outlined text-[20px]">arrow_outward</span>
+</a>
+</div>
+<div class="relative h-[400px] flex justify-center items-center">
+<div class="absolute w-64 h-64 bg-primary rounded-full blur-[100px] opacity-30"></div>
+<!-- Mini visual representation -->
+<div class="w-[280px] h-[500px] bg-surface rounded-[32px] p-2 rotate-12 shadow-2xl absolute -bottom-32 md:-bottom-48 border border-white/10">
+<div class="w-full h-full bg-surface-container-lowest rounded-[24px] overflow-hidden flex flex-col">
+<div class="h-20 bg-primary w-full px-4 pt-8">
+<div class="w-1/2 h-4 bg-white/20 rounded-full mb-2"></div>
+<div class="w-3/4 h-6 bg-white/40 rounded-full"></div>
+</div>
+<div class="p-4 flex-1 flex flex-col gap-3">
+<div class="w-full h-24 bg-surface-container rounded-xl"></div>
+<div class="grid grid-cols-2 gap-2">
+<div class="w-full h-20 bg-surface-container rounded-xl"></div>
+<div class="w-full h-20 bg-surface-container rounded-xl"></div>
+<div class="w-full h-20 bg-surface-container rounded-xl"></div>
+<div class="w-full h-20 bg-surface-container rounded-xl"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 12. Footer -->
+<footer class="bg-secondary dark:bg-inverse-surface w-full">
+<div class="flex flex-col md:flex-row justify-between items-start gap-12 max-w-[1280px] mx-auto px-gutter py-section-padding-desktop">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 mb-2"><img alt="Ciroo Logo" class="h-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjMeX_h92m-mQchgV2swFYhCJ6RexOz43xTm_3aRo-NnrL325sKAWk-BDCqbsecX92LmpAlwiWRCSxszsqKyhNHF6-2CEabJmgJuWnPYhywjAncU3zB5y_XN0beXTXjjpcFye85YWjhP09OYozURvNHLVcMqAHOhOcvvcvILjm5LhvcypVu_tuI9x-VaVP95sm8b-skw7lfifLyGqjTM6cvnIhTnhB4BbCO-7WTnpclAS6I8VL6Ql9Tupq_-vRhOKK7s0"><span class="font-bold text-xl text-surface-bright">Ciroo</span></div>
+<p class="text-surface/60 font-body-md max-w-xs">
+                    A Yorda product. © 2026 Yorda. All rights reserved.
+                </p>
+<a class="text-surface/60 hover:text-surface transition-opacity font-body-md inline-block" href="mailto:selcuk@ciroo.app">selcuk@ciroo.app</a>
+</div>
+<div class="flex flex-wrap gap-8 md:gap-16">
+<div class="flex flex-col gap-3">
+<a class="font-body-md text-surface/60 hover:text-surface transition-opacity" href="#how-it-works">How It Works</a>
+<a class="font-body-md text-surface/60 hover:text-surface transition-opacity" href="#features">Features</a>
+<a class="font-body-md text-surface/60 hover:text-surface transition-opacity" href="#pricing">Pricing</a>
+</div>
+<div class="flex flex-col gap-3">
+<a class="font-body-md text-surface/60 hover:text-surface transition-opacity" href="#">Privacy Policy</a>
+<a class="font-body-md text-surface/60 hover:text-surface transition-opacity" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+
+
+</body></html>
