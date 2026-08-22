@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="tr">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Ciroo — Günlük cironuzu 2 dakikada takip edin</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<!-- Google Fonts: Inter (uygulamada kullanılan font — GoogleFonts.interTextTheme()) -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Tailwind Config — Ciroo uygulamasının gerçek renk paletiyle (lib/main.dart) birebir -->
+<script id="tailwind-config">
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bg: "#F4F8FC",
+          surface: "#FFFFFF",
+          hairline: "#D7E2EE",
+          heading: "#0B2545",
+          body: "#60758D",
+          bodydim: "#71839A",
+          "accent-light": "#1671B8",
+          accent: "#153F70",
+          "accent-dark": "#0B2545"
+        },
+        fontFamily: {
+          sans: ["Inter", "sans-serif"]
+        },
+        borderRadius: {
+          xl: "14px",
+          "2xl": "16px",
+          "3xl": "20px"
+        }
+      }
+    }
+  }
+</script>
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  .card-shadow { box-shadow: 0 4px 14px rgba(21, 63, 112, 0.08); }
+  .hero-wash {
+    background: radial-gradient(circle at 50% 0%, rgba(22, 113, 184, 0.08) 0%, rgba(244, 248, 252, 1) 65%);
+  }
+</style>
+</head>
+<body class="bg-bg text-heading antialiased selection:bg-accent-light/20">
+
+<!-- 1. Nav -->
+<nav class="fixed top-0 w-full z-50 bg-bg/80 backdrop-blur-xl border-b border-hairline">
+  <div class="flex justify-between items-center max-w-[1280px] mx-auto px-6 h-28">
+    <div class="flex items-center gap-3">
+      <img alt="Ciroo" class="h-[88px] w-[88px] object-contain shrink-0" src="../assets/ciroo-logo.png">
+      <span class="font-extrabold text-3xl text-heading tracking-tight">Ciroo</span>
+    </div>
+    <div class="hidden md:flex items-center gap-8">
+      <a class="text-sm font-medium text-body hover:text-accent transition-colors" href="#nasil-calisir">Nasıl Çalışır</a>
+      <a class="text-sm font-medium text-body hover:text-accent transition-colors" href="#ozellikler">Özellikler</a>
+      <a class="text-sm font-medium text-body hover:text-accent transition-colors" href="#fiyatlandirma">Fiyatlandırma</a>
+      <a class="text-sm font-medium text-bodydim hover:text-accent transition-colors" href="/">EN</a>
+    </div>
+    <a class="hidden md:flex items-center justify-center bg-accent text-white px-6 py-3 rounded-xl text-sm font-bold hover:bg-accent-dark transition-all active:scale-95 shadow-sm" href="mailto:selcuk@ciroo.app?subject=Ciroo%20ile%20ilgileniyorum">
+      Kendi Uygulamanı Al
+    </a>
+    <button class="md:hidden text-heading">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+</nav>
+
+<!-- 2. Hero -->
+<section class="relative pt-40 pb-16 md:pt-52 md:pb-28 hero-wash overflow-hidden">
+  <div class="max-w-[1280px] mx-auto px-6 relative z-10 flex flex-col items-center text-center">
+    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-hairline mb-8 card-shadow">
+      <span class="w-2 h-2 rounded-full bg-accent-light animate-pulse"></span>
+      <span class="text-xs font-bold tracking-widest text-accent uppercase">Ciroo Uygulamasını Tanıyın</span>
+    </div>
+    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-heading max-w-3xl mx-auto mb-4 leading-tight">
+      Günlük cironuzu 2 dakikada takip edin.
+    </h1>
+    <p class="text-lg md:text-xl font-semibold text-accent-light max-w-2xl mx-auto mb-4">
+      Kendi logonuz, kendi renkleriniz — uygulama işletmenize özel görünür.
+    </p>
+    <p class="text-lg text-body max-w-2xl mx-auto mb-10">
+      Küçük işletmeniz için kasa sistemi kurmadan, akşamları elinizle girdiğiniz basit bir rakamla — günlük, haftalık, aylık cironuzu görün.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-20 w-full sm:w-auto">
+      <a class="w-full sm:w-auto px-8 py-4 bg-accent text-white rounded-xl font-bold hover:bg-accent-dark transition-all active:scale-95 shadow-lg shadow-accent/20 flex items-center justify-center gap-2" href="mailto:selcuk@ciroo.app?subject=Ciroo%20ile%20ilgileniyorum">
+        Kendi Uygulamanı Al <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+      </a>
+      <a class="w-full sm:w-auto px-8 py-4 bg-white border border-hairline text-heading rounded-xl font-bold hover:bg-bg transition-all active:scale-95 flex justify-center items-center" href="#nasil-calisir">
+        Nasıl Çalıştığını Gör
+      </a>
+    </div>
+
+    <!-- HERO GORSELI — gercek Manager ana ekrani screenshot'i -->
+    <div class="relative w-full max-w-[320px] md:max-w-[380px] mx-auto">
+      <div class="bg-heading rounded-[36px] p-2.5 shadow-2xl relative">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-5 bg-heading rounded-b-xl z-20"></div>
+        <div class="rounded-[28px] overflow-hidden h-[600px] md:h-[680px]">
+          <img alt="Ciroo yönetici ana ekranı" class="w-full h-full object-cover object-top" src="../assets/hero-manager-home.jpg">
+        </div>
+      </div>
+      <!-- Floating badge -->
+      <div class="absolute -right-6 md:-right-14 top-24 bg-white p-4 rounded-2xl card-shadow border border-hairline flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-green-600">
+          <span class="material-symbols-outlined">trending_up</span>
+        </div>
+        <div class="text-left">
+          <p class="text-xs font-semibold text-body">Bu hafta</p>
+          <p class="font-bold text-heading">+%18</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Uc Ozellik Karti -->
+<section class="py-16 md:py-24 bg-surface" id="ozellikler">
+  <div class="max-w-[1280px] mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-heading mb-4 tracking-tight">Basit, hızlı, güvenilir.</h2>
+      <p class="text-body text-lg">Karmaşık bir POS sistemi değil — işinize tam oturan dört özellik.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-bg rounded-3xl p-8 border border-hairline card-shadow">
+        <div class="w-12 h-12 rounded-2xl bg-accent-light/10 flex items-center justify-center mb-5">
+          <span class="material-symbols-outlined text-accent-light">edit_note</span>
+        </div>
+        <h3 class="text-xl font-bold text-heading mb-2">Kasa sistemi gerekmez</h3>
+        <p class="text-body">Elle veya kartla aldığınız günlük ciroyu, akşam kapanışta tek bir ekrandan girin.</p>
+      </div>
+      <div class="bg-bg rounded-3xl p-8 border border-hairline card-shadow">
+        <div class="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center mb-5">
+          <span class="material-symbols-outlined text-accent">trending_up</span>
+        </div>
+        <h3 class="text-xl font-bold text-heading mb-2">Anlık trend görünümü</h3>
+        <p class="text-body">Günlük, haftalık ve aylık karşılaştırmaları otomatik olarak görün.</p>
+      </div>
+      <div class="bg-bg rounded-3xl p-8 border border-hairline card-shadow">
+        <div class="w-12 h-12 rounded-2xl bg-accent-dark/10 flex items-center justify-center mb-5">
+          <span class="material-symbols-outlined text-accent-dark">mail</span>
+        </div>
+        <h3 class="text-xl font-bold text-heading mb-2">Haftalık e-posta raporu</h3>
+        <p class="text-body">Her hafta özet bir rapor kutunuza gelsin.</p>
+      </div>
+      <div class="bg-bg rounded-3xl p-8 border border-hairline card-shadow">
+        <div class="w-12 h-12 rounded-2xl bg-accent-light/10 flex items-center justify-center mb-5">
+          <span class="material-symbols-outlined text-accent-light">admin_panel_settings</span>
+        </div>
+        <h3 class="text-xl font-bold text-heading mb-2">Yönetici ve personel görünümü ayrı</h3>
+        <p class="text-body">Çalışanlarınız sadece günlük satış girer, siz ise raporları ve trendleri görürsünüz — herkes sadece görmesi gerekeni görür.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Nasil Calisir -->
+<section class="py-16 md:py-24 bg-bg" id="nasil-calisir">
+  <div class="max-w-[1280px] mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-20">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-heading mb-4 tracking-tight">Nasıl çalışır?</h2>
+      <p class="text-body text-lg">Gerçek uygulama ekranlarıyla, iki adımda tüm resim.</p>
+    </div>
+
+    <!-- Adim 1: Revenue Entry -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
+      <div class="order-2 lg:order-1">
+        <span class="text-xs font-bold tracking-widest text-accent-light uppercase mb-3 inline-block">Adım 1</span>
+        <h3 class="text-2xl md:text-3xl font-extrabold text-heading mb-4">Kategori bazlı hızlı giriş</h3>
+        <p class="text-body text-lg">Ürün kategorilerinize göre düzenlenmiş ekrandan, akşam kapanışında tek dokunuşla günün cirosunu girin. Eğitim gerekmez.</p>
+      </div>
+      <div class="order-1 lg:order-2">
+        <!-- REVENUE ENTRY GORSELI — gercek screenshot -->
+        <div class="relative max-w-[300px] mx-auto">
+          <div class="bg-heading rounded-[32px] p-2.5 shadow-2xl">
+            <div class="rounded-[24px] overflow-hidden h-[520px]">
+              <img alt="Ciroo Revenue Entry ekranı" class="w-full h-full object-cover object-top" src="../assets/revenue-entry.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Adim 2: Reports / Best Month -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <!-- REPORTS / BEST MONTH GORSELI — gercek screenshot -->
+        <div class="relative max-w-[300px] mx-auto">
+          <div class="bg-heading rounded-[32px] p-2.5 shadow-2xl">
+            <div class="rounded-[24px] overflow-hidden h-[520px]">
+              <img alt="Ciroo Reports — Best Month ekranı" class="w-full h-full object-cover object-top" src="../assets/reports-best-month.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <span class="text-xs font-bold tracking-widest text-accent-light uppercase mb-3 inline-block">Adım 2</span>
+        <h3 class="text-2xl md:text-3xl font-extrabold text-heading mb-4">Aylık büyüme grafiği</h3>
+        <p class="text-body text-lg">En iyi ayınızı, haftalık/aylık trendinizi ve ürün kategori kırılımını tek bakışta görün — hesaplama sizin yerinize yapılır.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Fiyatlandirma -->
+<section class="py-16 md:py-24 bg-surface border-y border-hairline" id="fiyatlandirma">
+  <div class="max-w-[1280px] mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-10">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-heading mb-4 tracking-tight">Kendi işletme uygulamanızı edinin.</h2>
+      <p class="text-body text-lg">Şeffaf aylık ücretlendirme. Gizli maliyet yok.</p>
+    </div>
+
+    <div class="max-w-3xl mx-auto mb-12 flex items-center justify-center gap-2 bg-accent-light/10 rounded-full px-6 py-3 text-center">
+      <span class="material-symbols-outlined text-accent-light text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+      <p class="text-sm font-semibold text-accent">
+        Founding Member fırsatı — ilk 3 müşteriye kurulum ücretinde %50 indirim
+      </p>
+    </div>
+
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+
+      <!-- Bronze -->
+      <div class="bg-bg rounded-3xl p-10 border border-hairline card-shadow flex flex-col h-full">
+        <h3 class="text-2xl font-bold text-heading mb-2">Bronze</h3>
+        <p class="text-body mb-6">Temel uygulama</p>
+        <div class="flex items-baseline gap-1 mb-1">
+          <span class="text-5xl font-black text-heading">99₺</span>
+          <span class="text-body">/ay</span>
+        </div>
+        <div class="mb-6 text-sm text-body">
+          Kurulum: <span class="font-bold text-heading">149₺</span>
+          <span class="line-through text-bodydim ml-1">299₺</span>
+        </div>
+        <ul class="space-y-4 mb-8 flex-1">
+          <li class="flex items-center gap-3 text-heading text-sm">
+            <span class="material-symbols-outlined text-accent-light text-[20px]">check_circle</span>
+            Günlük ciro girişi
+          </li>
+          <li class="flex items-center gap-3 text-heading text-sm">
+            <span class="material-symbols-outlined text-accent-light text-[20px]">check_circle</span>
+            Haftalık / aylık trend
+          </li>
+          <li class="flex items-center gap-3 text-heading text-sm">
+            <span class="material-symbols-outlined text-accent-light text-[20px]">check_circle</span>
+            Canlı panel senkronizasyonu
+          </li>
+          <li class="flex items-center gap-3 text-heading text-sm">
+            <span class="material-symbols-outlined text-accent-light text-[20px]">check_circle</span>
+            Tek kullanıcı
+          </li>
+        </ul>
+        <a class="w-full py-4 bg-white border border-hairline text-heading rounded-xl font-bold hover:bg-bg transition-colors active:scale-95 flex justify-center items-center" href="mailto:selcuk@ciroo.app?subject=Ciroo%20Bronze%20paketiyle%20ilgileniyorum">
+          Başlayın
+        </a>
+      </div>
+
+      <!-- Silver (one cikan) -->
+      <div class="bg-bg rounded-3xl p-10 border-2 border-accent shadow-xl relative transform md:-translate-y-4 flex flex-col h-full">
+        <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-white text-xs font-bold tracking-wide uppercase px-4 py-1.5 rounded-full">Öne Çıkan</span>
+        <h3 class="text-2xl font-bold text-heading mb-2">Silver</h3>
+        <p class="text-body mb-6">İşletmenize özel kurgulanmış</p>
+        <div class="flex items-baseline gap-1 mb-1">
+          <span class="text-5xl font-black text-heading">199₺</span>
+          <span class="text-body">/ay</span>
+        </div>
+        <div class="mb-6 text-sm text-body">
+          Kurulum: <span class="font-bold text-heading">249₺</span>
+          <span class="line-through text-bodydim ml-1">499₺</span>
+        </div>
+        <ul class="space-y-4 mb-8 flex-1">
+          <li class="flex items-center gap-3 text-heading text-sm font-semibold">
+            <span class="material-symbols-outlined text-accent text-[20px]">check_circle</span>
+            Bronze'daki her şey
+          </li>
+          <li class="flex items-center gap-3 text-heading text-sm">
+            <span class="material-symbols-outlined text-accent text-[20px]">check_circle</span>
+            Sınırsız kullanıcı
+          </li>
+          <li class="flex items-center gap-3 text-heading text-sm">
+            <span class="material-symbols-outlined text-accent text-[20px]">check_circle</span>
+            Haftalık e-posta raporu
+          </li>
+          <li class="flex items-center gap-3 text-heading text-sm">
+            <span class="material-symbols-outlined text-accent text-[20px]">check_circle</span>
+            Ürün kategori dağılımı
+          </li>
+          <li class="flex items-center gap-3 text-heading text-sm">
+            <span class="material-symbols-outlined text-accent text-[20px]">check_circle</span>
+            CSV dışa aktarım
+          </li>
+        </ul>
+        <a class="w-full py-4 bg-accent text-white rounded-xl font-bold hover:bg-accent-dark transition-colors active:scale-95 flex justify-center items-center" href="mailto:selcuk@ciroo.app?subject=Ciroo%20Silver%20Founding%20Member%20firsatiyla%20ilgileniyorum">
+          Founding Fırsatını Yakala
+        </a>
+      </div>
+
+      <!-- Gold -->
+      <div class="bg-bg rounded-3xl p-10 border border-hairline card-shadow flex flex-col h-full">
+        <h3 class="text-2xl font-bold text-heading mb-2">Gold</h3>
+        <p class="text-body mb-6">Büyüyen ekipler için</p>
+        <div class="flex items-baseline gap-1 mb-1">
+          <span class="text-5xl font-black text-heading">349₺</span>
+          <span class="text-body">/ay</span>
+        </div>
+        <div class="mb-6 text-sm text-body">
+          Kurulum: <span class="font-bold text-heading">399₺</span>
+          <span class="line-through text-bodydim ml-1">799₺</span>
+        </div>
+        <ul class="space-y-4 mb-8 flex-1">
+          <li class="flex items-center gap-3 text-heading text-sm font-semibold">
+            <span class="material-symbols-outlined text-accent-dark text-[20px]">check_circle</span>
+            Silver'daki her şey
+          </li>
+          <li class="flex items-center gap-3 text-heading text-sm">
+            <span class="material-symbols-outlined text-accent-dark text-[20px]">check_circle</span>
+            Çoklu şube desteği
+          </li>
+          <li class="flex items-center gap-3 text-heading text-sm">
+            <span class="material-symbols-outlined text-accent-dark text-[20px]">check_circle</span>
+            Kendi kullanıcılarınızı kendiniz yönetin
+          </li>
+          <li class="flex items-center gap-3 text-heading text-sm">
+            <span class="material-symbols-outlined text-accent-dark text-[20px]">check_circle</span>
+            Özel alan adı
+          </li>
+        </ul>
+        <a class="w-full py-4 bg-white border border-hairline text-heading rounded-xl font-bold hover:bg-bg transition-colors active:scale-95 flex justify-center items-center" href="mailto:selcuk@ciroo.app?subject=Ciroo%20Gold%20paketiyle%20ilgileniyorum">
+          Başlayın
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 6. Footer -->
+<footer class="bg-heading w-full">
+  <div class="flex flex-col md:flex-row justify-between items-start gap-10 max-w-[1280px] mx-auto px-6 py-16">
+    <div class="flex flex-col gap-4">
+      <span class="font-extrabold text-xl text-white">Ciroo</span>
+      <p class="text-white/50 max-w-xs text-sm">
+        Bir Yorda ürünüdür. © 2026 Yorda. Tüm hakları saklıdır.
+      </p>
+    </div>
+    <div class="flex flex-col gap-4">
+      <a class="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors text-sm" href="mailto:selcuk@ciroo.app">
+        <span class="material-symbols-outlined text-[18px]">mail</span>
+        selcuk@ciroo.app
+      </a>
+      <a class="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors text-sm" href="https://wa.me/905542923015" target="_blank" rel="noopener">
+        <span class="material-symbols-outlined text-[18px]">chat</span>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
