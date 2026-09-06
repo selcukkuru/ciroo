@@ -447,6 +447,17 @@
 Founding member pricing — available to our first 3 customers only. Prices return to standard after that.
 </p>
 </div>
+<div class="max-w-3xl mx-auto mb-10 flex flex-col items-center gap-3">
+<div class="flex items-center justify-center gap-3 flex-wrap">
+<span id="billing-label-monthly" class="text-sm font-bold text-on-surface cursor-pointer">Pay monthly</span>
+<button type="button" id="billing-toggle" role="switch" aria-checked="false" aria-label="Toggle yearly billing" class="relative inline-flex h-7 w-12 items-center rounded-full bg-outline/30 transition-colors">
+<span id="billing-toggle-knob" class="inline-block h-5 w-5 translate-x-1 transform rounded-full bg-white shadow transition-transform"></span>
+</button>
+<span id="billing-label-yearly" class="text-sm font-medium text-secondary cursor-pointer">Pay yearly</span>
+<span class="inline-flex items-center bg-green-100 text-green-600 text-xs font-bold px-2.5 py-1 rounded-full">Setup fee 50% off</span>
+</div>
+<p id="billing-note" class="text-[13px] text-secondary">Cancel anytime.</p>
+</div>
 <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
 
 <!-- Bronze -->
@@ -454,11 +465,14 @@ Founding member pricing — available to our first 3 customers only. Prices retu
 <h3 class="text-2xl font-bold text-on-surface mb-2">Bronze</h3>
 <p class="text-secondary mb-6">The core app</p>
 <div class="mb-1">
-<span class="text-2xl font-semibold text-secondary/70 line-through">€599</span>
+<span id="bronze-struck" class="text-2xl font-semibold text-secondary/70 line-through">€599</span>
 </div>
-<div class="flex items-baseline gap-1 mb-8">
-<span class="text-5xl font-black text-on-surface">€299</span>
+<div class="flex items-baseline gap-1 mb-1">
+<span id="bronze-setup" class="text-5xl font-black text-on-surface">€299</span>
 <span class="text-secondary whitespace-nowrap">one-time</span>
+</div>
+<div class="h-[18px] mb-6">
+<span id="bronze-save" class="text-[13px] font-bold text-green-600"></span>
 </div>
 <ul class="space-y-4 mb-8 flex-1">
 <li class="flex items-center gap-3 text-on-surface">
@@ -479,13 +493,13 @@ CSV export
 </li>
 <li class="flex items-center gap-3 text-on-surface">
 <span class="material-symbols-outlined text-primary">check_circle</span>
-Unlimited employee users
+Up to 2 users (owner + staff)
 </li>
 </ul>
 <div class="pt-6 border-t border-outline/10 mb-8">
 <p class="text-sm text-secondary flex flex-col gap-1">
 <span class="flex items-center justify-between w-full">
-Platform &amp; Maintenance <span class="font-bold text-on-surface">€17/mo</span>
+Platform &amp; Maintenance <span class="font-bold text-on-surface"><span id="bronze-platform">€17</span><span id="bronze-period">/mo</span></span>
 </span>
 <span class="text-xs opacity-80 mt-2">New features, integrations and custom development are quoted separately.</span>
 </p>
@@ -500,11 +514,14 @@ Get Started
 <h3 class="text-2xl font-bold text-on-surface mb-2">Silver</h3>
 <p class="text-secondary mb-6">Built around your products</p>
 <div class="mb-1">
-<span class="text-2xl font-semibold text-secondary/70 line-through">€999</span>
+<span id="silver-struck" class="text-2xl font-semibold text-secondary/70 line-through">€999</span>
 </div>
-<div class="flex items-baseline gap-1 mb-8">
-<span class="text-5xl font-black text-on-surface">€499</span>
+<div class="flex items-baseline gap-1 mb-1">
+<span id="silver-setup" class="text-5xl font-black text-on-surface">€499</span>
 <span class="text-secondary whitespace-nowrap">one-time</span>
+</div>
+<div class="h-[18px] mb-6">
+<span id="silver-save" class="text-[13px] font-bold text-green-600"></span>
 </div>
 <ul class="space-y-4 mb-8 flex-1">
 <li class="flex items-center gap-3 text-on-surface font-semibold">
@@ -531,7 +548,7 @@ Unlimited employee users
 <div class="pt-6 border-t border-outline/10 mb-8">
 <p class="text-sm text-secondary flex flex-col gap-1">
 <span class="flex items-center justify-between w-full">
-Platform &amp; Maintenance <span class="font-bold text-on-surface">€22/mo</span>
+Platform &amp; Maintenance <span class="font-bold text-on-surface"><span id="silver-platform">€22</span><span id="silver-period">/mo</span></span>
 </span>
 <span class="text-xs opacity-80 mt-2">New features, integrations and custom development are quoted separately.</span>
 </p>
@@ -546,11 +563,14 @@ Claim Founding Offer
 <h3 class="text-2xl font-bold text-on-surface mb-2">Gold</h3>
 <p class="text-secondary mb-6">For growing teams</p>
 <div class="mb-1">
-<span class="text-2xl font-semibold text-secondary/70 line-through">€1,599</span>
+<span id="gold-struck" class="text-2xl font-semibold text-secondary/70 line-through">€1,599</span>
 </div>
-<div class="flex items-baseline gap-1 mb-8">
-<span class="text-5xl font-black text-on-surface">€799</span>
+<div class="flex items-baseline gap-1 mb-1">
+<span id="gold-setup" class="text-5xl font-black text-on-surface">€799</span>
 <span class="text-secondary whitespace-nowrap">one-time</span>
+</div>
+<div class="h-[18px] mb-6">
+<span id="gold-save" class="text-[13px] font-bold text-green-600"></span>
 </div>
 <ul class="space-y-4 mb-8 flex-1">
 <li class="flex items-center gap-3 text-on-surface font-semibold">
@@ -577,7 +597,7 @@ Priority support
 <div class="pt-6 border-t border-outline/10 mb-8">
 <p class="text-sm text-secondary flex flex-col gap-1">
 <span class="flex items-center justify-between w-full">
-Platform &amp; Maintenance <span class="font-bold text-on-surface">€29/mo</span>
+Platform &amp; Maintenance <span class="font-bold text-on-surface"><span id="gold-platform">€29</span><span id="gold-period">/mo</span></span>
 </span>
 <span class="text-xs opacity-80 mt-2">New features, integrations and custom development are quoted separately.</span>
 </p>
@@ -590,10 +610,77 @@ Get Started
 </div>
 <div class="max-w-6xl mx-auto mt-8 flex items-center justify-center gap-2 text-center">
 <span class="material-symbols-outlined text-primary text-[18px]">shield</span>
-<p class="text-sm text-secondary">30-day money-back guarantee. Not happy in the first 30 days? We refund your setup fee and first month, minus payment processing fees, no questions asked.</p>
+<p class="text-sm text-secondary">30-day money-back guarantee. Not happy in the first 30 days? Full refund of your setup fee and first payment, no questions asked.</p>
 </div>
 </div>
 </section>
+<script>
+(function () {
+  var PRICING = {
+    bronze: {
+      monthly: { struck: '€599', setup: '€299', save: '', platform: '€17', period: '/mo' },
+      yearly: { struck: '€299', setup: '€149', save: 'You save €150', platform: '€204', period: '/year' }
+    },
+    silver: {
+      monthly: { struck: '€999', setup: '€499', save: '', platform: '€22', period: '/mo' },
+      yearly: { struck: '€499', setup: '€249', save: 'You save €250', platform: '€264', period: '/year' }
+    },
+    gold: {
+      monthly: { struck: '€1,599', setup: '€799', save: '', platform: '€29', period: '/mo' },
+      yearly: { struck: '€799', setup: '€399', save: 'You save €400', platform: '€348', period: '/year' }
+    }
+  };
+
+  function setBilling(yearly) {
+    ['bronze', 'silver', 'gold'].forEach(function (plan) {
+      var d = PRICING[plan][yearly ? 'yearly' : 'monthly'];
+      document.getElementById(plan + '-struck').textContent = d.struck;
+      document.getElementById(plan + '-setup').textContent = d.setup;
+      document.getElementById(plan + '-save').textContent = d.save;
+      document.getElementById(plan + '-platform').textContent = d.platform;
+      document.getElementById(plan + '-period').textContent = d.period;
+    });
+
+    document.getElementById('billing-note').textContent = yearly
+      ? 'One payment today, nothing for 12 months. Cancel anytime after.'
+      : 'Cancel anytime.';
+
+    var toggle = document.getElementById('billing-toggle');
+    var knob = document.getElementById('billing-toggle-knob');
+    var labelMonthly = document.getElementById('billing-label-monthly');
+    var labelYearly = document.getElementById('billing-label-yearly');
+
+    toggle.setAttribute('aria-checked', yearly ? 'true' : 'false');
+    if (yearly) {
+      toggle.classList.remove('bg-outline/30');
+      toggle.classList.add('bg-primary');
+      knob.classList.remove('translate-x-1');
+      knob.classList.add('translate-x-6');
+      labelMonthly.className = 'text-sm font-medium text-secondary cursor-pointer';
+      labelYearly.className = 'text-sm font-bold text-on-surface cursor-pointer';
+    } else {
+      toggle.classList.remove('bg-primary');
+      toggle.classList.add('bg-outline/30');
+      knob.classList.remove('translate-x-6');
+      knob.classList.add('translate-x-1');
+      labelMonthly.className = 'text-sm font-bold text-on-surface cursor-pointer';
+      labelYearly.className = 'text-sm font-medium text-secondary cursor-pointer';
+    }
+  }
+
+  document.getElementById('billing-toggle').addEventListener('click', function () {
+    setBilling(this.getAttribute('aria-checked') !== 'true');
+  });
+  document.getElementById('billing-label-monthly').addEventListener('click', function () {
+    setBilling(false);
+  });
+  document.getElementById('billing-label-yearly').addEventListener('click', function () {
+    setBilling(true);
+  });
+
+  setBilling(false);
+})();
+</script>
 <!-- 10. FAQ -->
 <section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface">
 <div class="max-w-3xl mx-auto px-gutter">
